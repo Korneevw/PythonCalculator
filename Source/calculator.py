@@ -111,7 +111,7 @@ class MainWindow(QMainWindow):
         elif self.operation == '%':
             self.result = self.storedNumber % float(self.writtenNumber)
         elif self.operation == '^':
-            self.result = self.storedNumber ^ float(self.writtenNumber)
+            self.result = self.storedNumber ** float(self.writtenNumber)
         self.storedNumber = 0
         self.writtenNumber = ''
         self.ui.fieldLineEdit.setText(str(self.result))
