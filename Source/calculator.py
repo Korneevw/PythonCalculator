@@ -7,6 +7,8 @@ import sys
 
 class MainWindow(QMainWindow):
 
+    DECIMAL_PRECISION = 8
+
     storedNumber = 0
     lastWrittenNumber = 0
     writtenNumber = ''
@@ -35,47 +37,47 @@ class MainWindow(QMainWindow):
         self.ui.zeroButton.clicked.connect(lambda: self.write_number(0))
         self.ui.dotButton.clicked.connect(lambda: self.write_number('.'))
 
-        self.ui.positiveNegativeButton.clicked.connect(self.make_positive_or_negative)
         self.ui.sqrtButton.clicked.connect(self.square_root)
 
         self.ui.plusButton.clicked.connect(lambda: self.set_operation('+'))
         self.ui.minusButton.clicked.connect(lambda: self.set_operation('-'))
         self.ui.multiplyButton.clicked.connect(lambda: self.set_operation('*'))
-        self.ui.divideButton.clicked.connect(lambda: self.set_operation('/'))
+        self.ui.divideButton.clicked.connect(lambda: self.set_operation(':'))
         self.ui.remainderButton.clicked.connect(lambda: self.set_operation('%'))
         self.ui.powerButton.clicked.connect(lambda: self.set_operation('^'))
 
         self.ui.equalsButton.clicked.connect(self.calculate)
+
+        self.ui.backspaceButton.clicked.connect(self.backspace)
+        self.ui.clearButton.clicked.connect(self.clear)
         
         self.setWindowTitle('The Nameless Calculator')
 
     def write_number(self, numberOrDot):
         if numberOrDot == '.':
-            if '.' in self.writtenNumber or len(self.writtenNumber) == 0:
+            if '.' in self.writtenNumber or self.writtenNumber == '':
                 return
         elif numberOrDot == 0:
-            if len(self.writtenNumber) == 0:
+            if self.writtenNumber == '':
                 return
         self.writtenNumber += str(numberOrDot)
         self.lastWrittenNumber = self.writtenNumber
         self.ui.fieldLineEdit.setText(self.writtenNumber)
 
     def backspace(self):
-        print('none')
+        if self.writtenNumber == '':
+            return
+        self.writtenNumber = self.writtenNumber[:-1]
+        self.lastWrittenNumber = self.writtenNumber
+        self.ui.fieldLineEdit.setText(self.writtenNumber)
 
     def clear(self):
-        print('none')
-
-    def make_positive_or_negative(self):
-        if self.result != 0 and self.writtenNumber == '' and self.storedNumber == 0:
-            self.result = self.result * -1
-            self.ui.fieldLineEdit.setText(str(self.result))
-            return
-        elif self.writtenNumber == '':
-            self.ui.fieldLineEdit.setText('Enter a number at first')
-            return
-        self.writtenNumber = str(float(self.writtenNumber) * -1)
-        self.ui.fieldLineEdit.setText(self.writtenNumber)
+        self.writtenNumber = ''
+        self.storedNumber = 0
+        self.lastWrittenNumber = 0
+        self.result = 0
+        self.operation = ''
+        self.ui.fieldLineEdit.setText('')
 
     def square_root(self):
         if self.result != 0 and self.writtenNumber == '' and self.storedNumber == 0:
@@ -85,7 +87,7 @@ class MainWindow(QMainWindow):
         elif self.writtenNumber == '':
             self.ui.fieldLineEdit.setText('Enter a number at first')
             return
-        self.writtenNumber = str(sqrt(float(self.writtenNumber)))
+        self.writtenNumber = str(round(sqrt(float(self.writtenNumber)), self.DECIMAL_PRECISION))
         self.ui.fieldLineEdit.setText(self.writtenNumber)
 
     def set_operation(self, operation):
@@ -96,7 +98,7 @@ class MainWindow(QMainWindow):
             return
         self.operation = operation
         if self.writtenNumber != '':
-            self.storedNumber = float(self.writtenNumber)
+            self.storedNumber = round(float(self.writtenNumber), self.DECIMAL_PRECISION)
         elif self.result != 0:
             self.storedNumber = self.result
         self.writtenNumber = ''
@@ -106,18 +108,21 @@ class MainWindow(QMainWindow):
         if self.storedNumber == 0 and self.writtenNumber == '':
             self.storedNumber = self.result
             self.writtenNumber = self.lastWrittenNumber
+        if self.writtenNumber == '':
+            self.ui.fieldLineEdit.setText('Enter the second number')
+            return
         if self.operation == '+':
-            self.result = self.storedNumber + float(self.writtenNumber)
+            self.result = round(self.storedNumber + float(self.writtenNumber), self.DECIMAL_PRECISION)
         elif self.operation == '-':
-            self.result = self.storedNumber - float(self.writtenNumber)
+            self.result = round(self.storedNumber - float(self.writtenNumber), self.DECIMAL_PRECISION)
         elif self.operation == '*':
-            self.result = self.storedNumber * float(self.writtenNumber)
-        elif self.operation == '/':
-            self.result = self.storedNumber / float(self.writtenNumber)
+            self.result = round(self.storedNumber * float(self.writtenNumber), self.DECIMAL_PRECISION)
+        elif self.operation == ':':
+            self.result = round(self.storedNumber / float(self.writtenNumber), self.DECIMAL_PRECISION)
         elif self.operation == '%':
-            self.result = self.storedNumber % float(self.writtenNumber)
+            self.result = round(self.storedNumber % float(self.writtenNumber), self.DECIMAL_PRECISION)
         elif self.operation == '^':
-            self.result = self.storedNumber ** float(self.writtenNumber)
+            self.result = round(self.storedNumber ** float(self.writtenNumber), self.DECIMAL_PRECISION)
         self.storedNumber = 0
         self.writtenNumber = ''
         self.ui.fieldLineEdit.setText(str(self.result))
