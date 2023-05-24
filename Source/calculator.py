@@ -60,6 +60,12 @@ class MainWindow(QMainWindow):
         self.lastWrittenNumber = self.writtenNumber
         self.ui.fieldLineEdit.setText(self.writtenNumber)
 
+    def backspace(self):
+        print('none')
+
+    def clear(self):
+        print('none')
+
     def make_positive_or_negative(self):
         if self.result != 0 and self.writtenNumber == '' and self.storedNumber == 0:
             self.result = self.result * -1

@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'calculator_new.ui'
+# Form implementation generated from reading ui file 'interface_2.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -25,13 +25,13 @@ class Ui_TheNamelessCalculator(object):
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.fieldLabel = QtWidgets.QLabel(parent=self.centralwidget)
+        self.label = QtWidgets.QLabel(parent=self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Maximum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.fieldLabel.sizePolicy().hasHeightForWidth())
-        self.fieldLabel.setSizePolicy(sizePolicy)
-        self.fieldLabel.setStyleSheet("QWidget {\n"
+        sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
+        self.label.setSizePolicy(sizePolicy)
+        self.label.setStyleSheet("QWidget {\n"
 "    color: #ffd9b5;\n"
 "    background-color: #031a36;\n"
 "    border-color: #87f1ff;\n"
@@ -39,14 +39,127 @@ class Ui_TheNamelessCalculator(object):
 "    font-size: 14pt;\n"
 "    font-weight: 400;\n"
 "}")
-        self.fieldLabel.setObjectName("fieldLabel")
-        self.verticalLayout.addWidget(self.fieldLabel)
+        self.label.setObjectName("label")
+        self.verticalLayout.addWidget(self.label)
         self.fieldLineEdit = QtWidgets.QLineEdit(parent=self.centralwidget)
-        self.fieldLineEdit.setEchoMode(QtWidgets.QLineEdit.EchoMode.Normal)
         self.fieldLineEdit.setObjectName("fieldLineEdit")
         self.verticalLayout.addWidget(self.fieldLineEdit)
         self.gridLayout = QtWidgets.QGridLayout()
         self.gridLayout.setObjectName("gridLayout")
+        self.nineButton = QtWidgets.QPushButton(parent=self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.nineButton.sizePolicy().hasHeightForWidth())
+        self.nineButton.setSizePolicy(sizePolicy)
+        self.nineButton.setStyleSheet("QPushButton {\n"
+"    background-color: #041a3b;\n"
+"    border-color: #51b3c9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #031736;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: transparent;\n"
+"}")
+        self.nineButton.setObjectName("nineButton")
+        self.gridLayout.addWidget(self.nineButton, 2, 2, 1, 1)
+        self.zeroButton = QtWidgets.QPushButton(parent=self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.zeroButton.sizePolicy().hasHeightForWidth())
+        self.zeroButton.setSizePolicy(sizePolicy)
+        self.zeroButton.setStyleSheet("QPushButton {\n"
+"    background-color: #041a3b;\n"
+"    border-color: #51b3c9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #031736;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: transparent;\n"
+"}")
+        self.zeroButton.setObjectName("zeroButton")
+        self.gridLayout.addWidget(self.zeroButton, 3, 0, 1, 1)
+        self.fiveButton = QtWidgets.QPushButton(parent=self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.fiveButton.sizePolicy().hasHeightForWidth())
+        self.fiveButton.setSizePolicy(sizePolicy)
+        self.fiveButton.setStyleSheet("QPushButton {\n"
+"    background-color: #041a3b;\n"
+"    border-color: #51b3c9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #031736;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: transparent;\n"
+"}")
+        self.fiveButton.setObjectName("fiveButton")
+        self.gridLayout.addWidget(self.fiveButton, 1, 1, 1, 1)
+        self.eightButton = QtWidgets.QPushButton(parent=self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.eightButton.sizePolicy().hasHeightForWidth())
+        self.eightButton.setSizePolicy(sizePolicy)
+        self.eightButton.setStyleSheet("QPushButton {\n"
+"    background-color: #041a3b;\n"
+"    border-color: #51b3c9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #031736;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: transparent;\n"
+"}")
+        self.eightButton.setObjectName("eightButton")
+        self.gridLayout.addWidget(self.eightButton, 2, 1, 1, 1)
+        self.sixButton = QtWidgets.QPushButton(parent=self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.sixButton.sizePolicy().hasHeightForWidth())
+        self.sixButton.setSizePolicy(sizePolicy)
+        self.sixButton.setStyleSheet("QPushButton {\n"
+"    background-color: #041a3b;\n"
+"    border-color: #51b3c9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #031736;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: transparent;\n"
+"}")
+        self.sixButton.setObjectName("sixButton")
+        self.gridLayout.addWidget(self.sixButton, 1, 2, 1, 1)
+        self.oneButton = QtWidgets.QPushButton(parent=self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.oneButton.sizePolicy().hasHeightForWidth())
+        self.oneButton.setSizePolicy(sizePolicy)
+        self.oneButton.setStyleSheet("QPushButton {\n"
+"    background-color: #041a3b;\n"
+"    border-color: #51b3c9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #031736;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: transparent;\n"
+"}")
+        self.oneButton.setObjectName("oneButton")
+        self.gridLayout.addWidget(self.oneButton, 0, 0, 1, 1)
         self.dotButton = QtWidgets.QPushButton(parent=self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -66,6 +179,82 @@ class Ui_TheNamelessCalculator(object):
 "}")
         self.dotButton.setObjectName("dotButton")
         self.gridLayout.addWidget(self.dotButton, 3, 1, 1, 1)
+        self.multiplyButton = QtWidgets.QPushButton(parent=self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.multiplyButton.sizePolicy().hasHeightForWidth())
+        self.multiplyButton.setSizePolicy(sizePolicy)
+        self.multiplyButton.setStyleSheet("QPushButton {\n"
+"    background-color: #041a3b;\n"
+"    border-color: #51b3c9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #031736;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: transparent;\n"
+"}")
+        self.multiplyButton.setObjectName("multiplyButton")
+        self.gridLayout.addWidget(self.multiplyButton, 3, 3, 1, 1)
+        self.sqrtButton = QtWidgets.QPushButton(parent=self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.sqrtButton.sizePolicy().hasHeightForWidth())
+        self.sqrtButton.setSizePolicy(sizePolicy)
+        self.sqrtButton.setStyleSheet("QPushButton {\n"
+"    background-color: #041a3b;\n"
+"    border-color: #51b3c9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #031736;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: transparent;\n"
+"}")
+        self.sqrtButton.setObjectName("sqrtButton")
+        self.gridLayout.addWidget(self.sqrtButton, 5, 2, 1, 1)
+        self.equalsButton = QtWidgets.QPushButton(parent=self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.equalsButton.sizePolicy().hasHeightForWidth())
+        self.equalsButton.setSizePolicy(sizePolicy)
+        self.equalsButton.setStyleSheet("QPushButton {\n"
+"    background-color: #041a3b;\n"
+"    border-color: #51b3c9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #031736;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: transparent;\n"
+"}")
+        self.equalsButton.setObjectName("equalsButton")
+        self.gridLayout.addWidget(self.equalsButton, 5, 3, 1, 1)
+        self.minusButton = QtWidgets.QPushButton(parent=self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.minusButton.sizePolicy().hasHeightForWidth())
+        self.minusButton.setSizePolicy(sizePolicy)
+        self.minusButton.setStyleSheet("QPushButton {\n"
+"    background-color: #041a3b;\n"
+"    border-color: #51b3c9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #031736;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: transparent;\n"
+"}")
+        self.minusButton.setObjectName("minusButton")
+        self.gridLayout.addWidget(self.minusButton, 1, 3, 1, 1)
         self.divideButton = QtWidgets.QPushButton(parent=self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -103,102 +292,7 @@ class Ui_TheNamelessCalculator(object):
 "    background-color: transparent;\n"
 "}")
         self.remainderButton.setObjectName("remainderButton")
-        self.gridLayout.addWidget(self.remainderButton, 4, 1, 1, 1)
-        self.minusButton = QtWidgets.QPushButton(parent=self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.minusButton.sizePolicy().hasHeightForWidth())
-        self.minusButton.setSizePolicy(sizePolicy)
-        self.minusButton.setStyleSheet("QPushButton {\n"
-"    background-color: #041a3b;\n"
-"    border-color: #51b3c9;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #031736;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: transparent;\n"
-"}")
-        self.minusButton.setObjectName("minusButton")
-        self.gridLayout.addWidget(self.minusButton, 1, 3, 1, 1)
-        self.sqrtButton = QtWidgets.QPushButton(parent=self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.sqrtButton.sizePolicy().hasHeightForWidth())
-        self.sqrtButton.setSizePolicy(sizePolicy)
-        self.sqrtButton.setStyleSheet("QPushButton {\n"
-"    background-color: #041a3b;\n"
-"    border-color: #51b3c9;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #031736;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: transparent;\n"
-"}")
-        self.sqrtButton.setObjectName("sqrtButton")
-        self.gridLayout.addWidget(self.sqrtButton, 4, 2, 1, 1)
-        self.equalsButton = QtWidgets.QPushButton(parent=self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.equalsButton.sizePolicy().hasHeightForWidth())
-        self.equalsButton.setSizePolicy(sizePolicy)
-        self.equalsButton.setStyleSheet("QPushButton {\n"
-"    background-color: #041a3b;\n"
-"    border-color: #51b3c9;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #031736;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: transparent;\n"
-"}")
-        self.equalsButton.setObjectName("equalsButton")
-        self.gridLayout.addWidget(self.equalsButton, 4, 3, 1, 1)
-        self.multiplyButton = QtWidgets.QPushButton(parent=self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.multiplyButton.sizePolicy().hasHeightForWidth())
-        self.multiplyButton.setSizePolicy(sizePolicy)
-        self.multiplyButton.setStyleSheet("QPushButton {\n"
-"    background-color: #041a3b;\n"
-"    border-color: #51b3c9;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #031736;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: transparent;\n"
-"}")
-        self.multiplyButton.setObjectName("multiplyButton")
-        self.gridLayout.addWidget(self.multiplyButton, 3, 3, 1, 1)
-        self.powerButton = QtWidgets.QPushButton(parent=self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.powerButton.sizePolicy().hasHeightForWidth())
-        self.powerButton.setSizePolicy(sizePolicy)
-        self.powerButton.setStyleSheet("QPushButton {\n"
-"    background-color: #041a3b;\n"
-"    border-color: #51b3c9;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #031736;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: transparent;\n"
-"}")
-        self.powerButton.setObjectName("powerButton")
-        self.gridLayout.addWidget(self.powerButton, 3, 2, 1, 1)
+        self.gridLayout.addWidget(self.remainderButton, 5, 1, 1, 1)
         self.sevenButton = QtWidgets.QPushButton(parent=self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -218,13 +312,13 @@ class Ui_TheNamelessCalculator(object):
 "}")
         self.sevenButton.setObjectName("sevenButton")
         self.gridLayout.addWidget(self.sevenButton, 2, 0, 1, 1)
-        self.nineButton = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.powerButton = QtWidgets.QPushButton(parent=self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.nineButton.sizePolicy().hasHeightForWidth())
-        self.nineButton.setSizePolicy(sizePolicy)
-        self.nineButton.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.powerButton.sizePolicy().hasHeightForWidth())
+        self.powerButton.setSizePolicy(sizePolicy)
+        self.powerButton.setStyleSheet("QPushButton {\n"
 "    background-color: #041a3b;\n"
 "    border-color: #51b3c9;\n"
 "}\n"
@@ -235,15 +329,15 @@ class Ui_TheNamelessCalculator(object):
 "QPushButton:pressed {\n"
 "    background-color: transparent;\n"
 "}")
-        self.nineButton.setObjectName("nineButton")
-        self.gridLayout.addWidget(self.nineButton, 2, 2, 1, 1)
-        self.fiveButton = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.powerButton.setObjectName("powerButton")
+        self.gridLayout.addWidget(self.powerButton, 3, 2, 1, 1)
+        self.clearButton = QtWidgets.QPushButton(parent=self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.fiveButton.sizePolicy().hasHeightForWidth())
-        self.fiveButton.setSizePolicy(sizePolicy)
-        self.fiveButton.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.clearButton.sizePolicy().hasHeightForWidth())
+        self.clearButton.setSizePolicy(sizePolicy)
+        self.clearButton.setStyleSheet("QPushButton {\n"
 "    background-color: #041a3b;\n"
 "    border-color: #51b3c9;\n"
 "}\n"
@@ -254,15 +348,15 @@ class Ui_TheNamelessCalculator(object):
 "QPushButton:pressed {\n"
 "    background-color: transparent;\n"
 "}")
-        self.fiveButton.setObjectName("fiveButton")
-        self.gridLayout.addWidget(self.fiveButton, 1, 1, 1, 1)
-        self.zeroButton = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.clearButton.setObjectName("clearButton")
+        self.gridLayout.addWidget(self.clearButton, 5, 0, 1, 1)
+        self.threeButton = QtWidgets.QPushButton(parent=self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.zeroButton.sizePolicy().hasHeightForWidth())
-        self.zeroButton.setSizePolicy(sizePolicy)
-        self.zeroButton.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.threeButton.sizePolicy().hasHeightForWidth())
+        self.threeButton.setSizePolicy(sizePolicy)
+        self.threeButton.setStyleSheet("QPushButton {\n"
 "    background-color: #041a3b;\n"
 "    border-color: #51b3c9;\n"
 "}\n"
@@ -273,15 +367,15 @@ class Ui_TheNamelessCalculator(object):
 "QPushButton:pressed {\n"
 "    background-color: transparent;\n"
 "}")
-        self.zeroButton.setObjectName("zeroButton")
-        self.gridLayout.addWidget(self.zeroButton, 3, 0, 1, 1)
-        self.oneButton = QtWidgets.QPushButton(parent=self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.threeButton.setObjectName("threeButton")
+        self.gridLayout.addWidget(self.threeButton, 0, 2, 1, 1)
+        self.plusButton = QtWidgets.QPushButton(parent=self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.oneButton.sizePolicy().hasHeightForWidth())
-        self.oneButton.setSizePolicy(sizePolicy)
-        self.oneButton.setStyleSheet("QPushButton {\n"
+        sizePolicy.setHeightForWidth(self.plusButton.sizePolicy().hasHeightForWidth())
+        self.plusButton.setSizePolicy(sizePolicy)
+        self.plusButton.setStyleSheet("QPushButton {\n"
 "    background-color: #041a3b;\n"
 "    border-color: #51b3c9;\n"
 "}\n"
@@ -292,46 +386,8 @@ class Ui_TheNamelessCalculator(object):
 "QPushButton:pressed {\n"
 "    background-color: transparent;\n"
 "}")
-        self.oneButton.setObjectName("oneButton")
-        self.gridLayout.addWidget(self.oneButton, 0, 0, 1, 1)
-        self.sixButton = QtWidgets.QPushButton(parent=self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.sixButton.sizePolicy().hasHeightForWidth())
-        self.sixButton.setSizePolicy(sizePolicy)
-        self.sixButton.setStyleSheet("QPushButton {\n"
-"    background-color: #041a3b;\n"
-"    border-color: #51b3c9;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #031736;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: transparent;\n"
-"}")
-        self.sixButton.setObjectName("sixButton")
-        self.gridLayout.addWidget(self.sixButton, 1, 2, 1, 1)
-        self.eightButton = QtWidgets.QPushButton(parent=self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.eightButton.sizePolicy().hasHeightForWidth())
-        self.eightButton.setSizePolicy(sizePolicy)
-        self.eightButton.setStyleSheet("QPushButton {\n"
-"    background-color: #041a3b;\n"
-"    border-color: #51b3c9;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #031736;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: transparent;\n"
-"}")
-        self.eightButton.setObjectName("eightButton")
-        self.gridLayout.addWidget(self.eightButton, 2, 1, 1, 1)
+        self.plusButton.setObjectName("plusButton")
+        self.gridLayout.addWidget(self.plusButton, 0, 3, 1, 1)
         self.twoButton = QtWidgets.QPushButton(parent=self.centralwidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -370,64 +426,21 @@ class Ui_TheNamelessCalculator(object):
 "}")
         self.fourButton.setObjectName("fourButton")
         self.gridLayout.addWidget(self.fourButton, 1, 0, 1, 1)
-        self.threeButton = QtWidgets.QPushButton(parent=self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.threeButton.sizePolicy().hasHeightForWidth())
-        self.threeButton.setSizePolicy(sizePolicy)
-        self.threeButton.setStyleSheet("QPushButton {\n"
-"    background-color: #041a3b;\n"
-"    border-color: #51b3c9;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #031736;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: transparent;\n"
-"}")
-        self.threeButton.setObjectName("threeButton")
-        self.gridLayout.addWidget(self.threeButton, 0, 2, 1, 1)
-        self.positiveNegativeButton = QtWidgets.QPushButton(parent=self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.positiveNegativeButton.sizePolicy().hasHeightForWidth())
-        self.positiveNegativeButton.setSizePolicy(sizePolicy)
-        self.positiveNegativeButton.setStyleSheet("QPushButton {\n"
-"    background-color: #041a3b;\n"
-"    border-color: #51b3c9;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #031736;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: transparent;\n"
-"}")
-        self.positiveNegativeButton.setObjectName("positiveNegativeButton")
-        self.gridLayout.addWidget(self.positiveNegativeButton, 4, 0, 1, 1)
-        self.plusButton = QtWidgets.QPushButton(parent=self.centralwidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.plusButton.sizePolicy().hasHeightForWidth())
-        self.plusButton.setSizePolicy(sizePolicy)
-        self.plusButton.setStyleSheet("QPushButton {\n"
-"    background-color: #041a3b;\n"
-"    border-color: #51b3c9;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #031736;\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: transparent;\n"
-"}")
-        self.plusButton.setObjectName("plusButton")
-        self.gridLayout.addWidget(self.plusButton, 0, 3, 1, 1)
         self.verticalLayout.addLayout(self.gridLayout)
+        self.backspaceButton = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.backspaceButton.setStyleSheet("QPushButton {\n"
+"    background-color: #041a3b;\n"
+"    border-color: #51b3c9;\n"
+"}\n"
+"QPushButton:hover {\n"
+"    background-color: #031736;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: transparent;\n"
+"}")
+        self.backspaceButton.setObjectName("backspaceButton")
+        self.verticalLayout.addWidget(self.backspaceButton)
         TheNamelessCalculator.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=TheNamelessCalculator)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 373, 35))
@@ -443,24 +456,25 @@ class Ui_TheNamelessCalculator(object):
     def retranslateUi(self, TheNamelessCalculator):
         _translate = QtCore.QCoreApplication.translate
         TheNamelessCalculator.setWindowTitle(_translate("TheNamelessCalculator", "Calculator"))
-        self.fieldLabel.setText(_translate("TheNamelessCalculator", "Enter the equation:"))
+        self.label.setText(_translate("TheNamelessCalculator", "Enter the equation:"))
+        self.nineButton.setText(_translate("TheNamelessCalculator", "9"))
+        self.zeroButton.setText(_translate("TheNamelessCalculator", "0"))
+        self.fiveButton.setText(_translate("TheNamelessCalculator", "5"))
+        self.eightButton.setText(_translate("TheNamelessCalculator", "8"))
+        self.sixButton.setText(_translate("TheNamelessCalculator", "6"))
+        self.oneButton.setText(_translate("TheNamelessCalculator", "1"))
         self.dotButton.setText(_translate("TheNamelessCalculator", "."))
-        self.divideButton.setText(_translate("TheNamelessCalculator", ":"))
-        self.remainderButton.setText(_translate("TheNamelessCalculator", "%"))
-        self.minusButton.setText(_translate("TheNamelessCalculator", "-"))
+        self.multiplyButton.setText(_translate("TheNamelessCalculator", "x"))
         self.sqrtButton.setText(_translate("TheNamelessCalculator", "√"))
         self.equalsButton.setText(_translate("TheNamelessCalculator", "="))
-        self.multiplyButton.setText(_translate("TheNamelessCalculator", "x"))
-        self.powerButton.setText(_translate("TheNamelessCalculator", "^"))
+        self.minusButton.setText(_translate("TheNamelessCalculator", "-"))
+        self.divideButton.setText(_translate("TheNamelessCalculator", ":"))
+        self.remainderButton.setText(_translate("TheNamelessCalculator", "rem."))
         self.sevenButton.setText(_translate("TheNamelessCalculator", "7"))
-        self.nineButton.setText(_translate("TheNamelessCalculator", "9"))
-        self.fiveButton.setText(_translate("TheNamelessCalculator", "5"))
-        self.zeroButton.setText(_translate("TheNamelessCalculator", "0"))
-        self.oneButton.setText(_translate("TheNamelessCalculator", "1"))
-        self.sixButton.setText(_translate("TheNamelessCalculator", "6"))
-        self.eightButton.setText(_translate("TheNamelessCalculator", "8"))
+        self.powerButton.setText(_translate("TheNamelessCalculator", "^"))
+        self.clearButton.setText(_translate("TheNamelessCalculator", "C"))
+        self.threeButton.setText(_translate("TheNamelessCalculator", "3"))
+        self.plusButton.setText(_translate("TheNamelessCalculator", "+"))
         self.twoButton.setText(_translate("TheNamelessCalculator", "2"))
         self.fourButton.setText(_translate("TheNamelessCalculator", "4"))
-        self.threeButton.setText(_translate("TheNamelessCalculator", "3"))
-        self.positiveNegativeButton.setText(_translate("TheNamelessCalculator", "+/-"))
-        self.plusButton.setText(_translate("TheNamelessCalculator", "+"))
+        self.backspaceButton.setText(_translate("TheNamelessCalculator", "←"))
